@@ -6,7 +6,7 @@
 
     &__container {
         max-height: 11rem;
-        margin: 16px auto;
+        margin: 1rem auto;
         width: 90%;
       
         display: flex;
@@ -18,7 +18,7 @@
           align-items: center;
           justify-content: flex-end;
           position: relative;
-          margin: 24px auto;
+          margin: 1.5rem auto;
         }
 
         @include desktop {
@@ -30,11 +30,11 @@
 
   background-color: $primary-color-white;
   &__logo {
-    height: 25px;
+    height: 1.5625rem;
     display: flex;
     justify-content: center;
-    width: 120px;
-    margin-bottom: 10px;
+    width: 7.5rem;
+    margin-bottom: 0.625rem;
 
     @include tablet {
       margin: 0;
@@ -45,14 +45,14 @@
   }
   &__search {
     width: 100%;
-    height: 40px;
+    height: 2.5rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border-radius: 4px;
-    border: 1px solid $secondary-color-mercury;
+    border-radius: 0.25rem;
+    border: 0.0625rem solid $secondary-color-mercury;
     &:active {
-      border: 1px solid $primary-color-blue;
+      border: 0.0625rem solid $primary-color-blue;
 
     }
 
@@ -65,7 +65,7 @@
       display: flex;
       @include tablet  {
         width: 35%;
-        margin: 0 20px;
+        margin: 0 1.25rem;
       }
 
       @include desktop {
@@ -87,9 +87,9 @@
     &-bar {
       resize: none;
       width: inherit;
-      height: 40px;
-      margin-right: 5px;
-      border: 1px solid $secondary-color-mercury;
+      height: 2.5rem;
+      margin-right: 0.3125rem;
+      border: 0.0625rem solid $secondary-color-mercury;
       border-left: none;
       border-right: none;
       &:focus {
@@ -100,8 +100,8 @@
     }
 
     &-user--mobile {
-      min-width: 36px;
-      height: 36px;
+      min-width: 2.25rem;
+      height: 2.25rem;
       background-image: url(../../assets/Images/Mohan-muruge.jpg);
       background-repeat: no-repeat;
       background-size: cover;
@@ -128,10 +128,10 @@
     }
 
     &-upload {
-      height: 40px;
+      height: 2.5rem;
       background-color: $primary-color-blue;
       border: none;
-      border-radius: 4px;
+      border-radius: 0.25rem;
       color: $primary-color-white;
       display: flex;
       justify-content: center;
@@ -152,12 +152,12 @@
       &-image {
         padding-right: 1rem;
         position: absolute;
-        left: 10px;
+        left: 0.625rem;
       }
     }
     &-user--tablet {
-      min-width: 40px;
-      height: 40px;
+      min-width: 2.5rem;
+      height: 2.5rem;
       background-image: url(../../assets/Images/Mohan-muruge.jpg);
       background-repeat: no-repeat;
       background-size: cover;

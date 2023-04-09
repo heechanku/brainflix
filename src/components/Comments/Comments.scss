@@ -10,10 +10,10 @@
   color: $primary-color-black;
   font-size: 0.8125rem;
   width: 90%;
-  margin: 24px auto;
+  margin: 1.5rem auto;
 
   @include tablet {
-    margin: 36px auto;
+    margin: 2.25rem auto;
   }
 
   @include desktop {
@@ -24,7 +24,7 @@
     color: $primary-color-black;
     line-height: 2rem;
     padding: 0;
-    margin:16px 0;
+    margin:1rem 0;
 
 
     @include tablet {
@@ -35,7 +35,7 @@
   &__input {
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid $secondary-color-mercury;
+    border-bottom: 0.0625rem solid $secondary-color-mercury;
     width: 100%;
 
   
@@ -88,7 +88,7 @@
     &__comment {
       @include mobile__lables-buttons;
       color: $primary-color-silver;
-      margin: 5px 0;
+      margin: 0.3125rem 0;
 
       @include tablet {
         @include tablet__lables-buttons;
@@ -97,8 +97,8 @@
 
     &__comment-input {
       background-color: $secondary-color-albaster;
-      border-radius: 4px;
-      border: 1.5px solid $secondary-color-mercury;
+      border-radius: 0.25rem;
+      border: 0.0938rem solid $secondary-color-mercury;
       padding: 0.625rem;
       padding-bottom: 4rem;
       color: $primary-color-black;
@@ -108,20 +108,20 @@
       
 
       @include tablet {
-        padding: 10px 0;
-        height: 40px;
-        padding-left: 10px;
+        padding: 0.625rem 0;
+        height: 2.5rem;
+        padding-left: 0.625rem;
       }
     }
 
     &--error {
-      border: 1.5px solid red;
+      border: 0.0938rem solid red;
       outline-width: 0;
     }
 
 
     &__comment-input:focus {
-      border: 1.5px solid $primary-color-blue;
+      border: 0.0938rem solid $primary-color-blue;
       outline-width: 0;
     }
   }
@@ -138,13 +138,13 @@
     }
 
     @include desktop {
-      padding-right: 20px;
+      padding-right: 1.25rem;
 
     }
 
     
     &-button {
-      height: 40px;
+      height: 2.5rem;
       width: 100%;
       background-color: $primary-color-blue;
       border: none;
@@ -175,7 +175,7 @@
       &__image {
         padding-right: 1rem;
         position: absolute;
-        left: 10px;
+        left: 0.625rem;
       }
     }
   }
