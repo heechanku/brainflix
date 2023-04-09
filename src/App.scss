@@ -38,4 +38,13 @@ ul {
     display: flex;  
    
   }
+
+
+}
+
+.about-comments__container {
+  @include desktop {
+    min-width: 860px;
+    max-width: 860px;
+  }
 }

@@ -12,6 +12,11 @@
       width: 100%;
       border-bottom: 1.5px solid $secondary-color-mercury;
       padding: 10px 0;
+
+      @include desktop {
+        border-top: 1.5px solid $secondary-color-mercury;
+        border-bottom: none;
+      }
       
   
 
