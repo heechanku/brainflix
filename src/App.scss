@@ -30,3 +30,12 @@ a:active {
 ul {
   list-style: none;
 }
+
+.big__container {
+  @include desktop {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;  
+   
+  }
+}

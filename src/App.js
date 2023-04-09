@@ -5,7 +5,7 @@ import Comments from "./components/Comments/Comments";
 import Videos from "./components/Videos/Videos"
 import { useState } from "react";
 import Videodetails from "./assets/Data/video-details.json"
-
+import About from "./components/About/About";
 
 
 
@@ -24,8 +24,15 @@ function App() {
     <div>
     <Header />
     <Hero video={selectedVideo}/>
+
+    <div className="big__container">
+
+    <div className="about-comments__container">
+    <About video={selectedVideo}/>
     <Comments video={selectedVideo}/>
+    </div>
     <Videos videos={Videodetails} selectedVideo={handleSelectVideo} video={selectedVideo}/>
+    </div>
    
     </div>
   );

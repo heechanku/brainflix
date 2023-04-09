@@ -27,10 +27,20 @@
         margin-right: 1rem;
         border-radius: 4px;
         object-fit:cover;
+
+        @include tablet {
+          width: 120px;
+          height: 5rem;
+
+        }
       }
     }
     &__sub {
       width: 60%;
+
+      @include tablet {
+        width: 25%;
+      }
       &-title {
         @include mobile__subheader;
         text-align: left;
@@ -48,7 +58,7 @@
         margin:0;
 
         @include tablet {
-          @include tablet__subheader;
+          @include tablet__bodycopy;
         }
       }
     }

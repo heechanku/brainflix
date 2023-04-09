@@ -32,9 +32,7 @@
 
   
 
-    @include desktop {
-      width: 50%;
-    }
+   
   }
 
   &__profile-pic {
@@ -129,6 +127,8 @@
     @include tablet {
       width: 25%;
     }
+
+    
     &-button {
       height: 40px;
       width: 100%;
@@ -145,6 +145,8 @@
       @include tablet {
         @include tablet__lables-buttons
       }
+
+      
       
 
 

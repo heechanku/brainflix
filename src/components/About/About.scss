@@ -1,0 +1,88 @@
+@import "../../styles/partials/colors";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/typography";
+
+
+.hero {
+    &__about__container {
+        width: 90%;
+        margin: 24px auto;
+    }
+
+    &__title {
+        @include mobile__page-header;
+
+    }
+
+    &__info {
+        @include mobile__header;
+        color: $primary-color-silver;
+
+        &--channel {
+            color: $primary-color-black;
+        }
+
+        &__container {
+            padding: 10px 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            border-bottom: 2px solid $secondary-color-mercury;
+            border-top: 2px solid $secondary-color-mercury;
+            @include tablet {
+                border-top: none;
+            }
+
+
+        }
+        
+    }
+
+    &__icon {
+
+        margin-right: 5px;
+
+        &__container {
+            display: flex;
+            flex-direction: row;
+        }
+
+    }
+    
+   
+
+    &__medium__container {
+        display: flex;
+        flex-direction: column;
+        width:50%;
+
+        @include tablet {
+            flex-direction: row
+        }
+
+        &--icons {
+
+            @include tablet {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+          
+        }
+
+        
+    }
+
+    &__margin {
+        @include tablet {
+            margin-right: 20px;
+        }
+    }
+
+    &__description {
+        @include mobile__bodycopy;
+        color: $primary-color-black;
+        margin: 16px 0;
+    }
+
+}
