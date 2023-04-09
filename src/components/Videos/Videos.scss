@@ -15,23 +15,27 @@
       color: $primary-color-silver;
     }
     &__container {
+      margin:10px 0;
+      border:none;
+      padding:0;
       display: flex;
-      padding-bottom: 1.5rem;
       align-items: flex-start;
+      background-color: $primary-color-white;
       &-image {
-        width: 7.5rem;
-        height: 4.375rem;
+        width: 40%;
+        height: 6rem;
         margin-right: 1rem;
         border-radius: 4px;
-        object-fit: cover;
+        object-fit:cover;
       }
     }
     &__sub {
+      width: 60%;
       &-title {
         @include mobile__subheader;
         text-align: left;
         padding-bottom: 10px;
-        width: 9.5rem;
+        width: 100%;
         margin:0;
         
         @include tablet {
