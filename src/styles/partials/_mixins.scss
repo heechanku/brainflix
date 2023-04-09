@@ -1,0 +1,97 @@
+
+
+// Breakpoints
+
+
+@mixin tablet {
+    @media (min-width: 768px){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1280px){
+        @content;
+    }
+}
+
+
+// mobile
+
+@mixin mobile__page-header {
+    font-family: "avenir";
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    color: $primary-color-black;
+  }
+  @mixin mobile__header {
+    font-family: "avenir";
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+    color: $primary-color-black;
+  }
+  
+  @mixin mobile__subheader {
+    font-family: "avenir";
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 700;
+    color: $primary-color-black;
+  }
+
+  @mixin mobile__bodycopy {
+    font-family: "avenir";
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    color: $primary-color-black;
+  }
+
+  @mixin mobile__lables-buttons {
+    font-family: "avenir";
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+
+  // tablet
+
+  @mixin tablet__page-header {
+    font-family: "avenir";
+    font-size: 33px;
+    line-height: 44px;
+    font-weight: 700;
+    color: $primary-color-black;
+  }
+  @mixin tablet__header {
+    font-family: "avenir";
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+    color: $primary-color-black;
+  }
+  
+  @mixin tablet__subheader {
+    font-family: "avenir";
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 700;
+    color: $primary-color-black;
+  }
+
+  @mixin tablet__bodycopy {
+    font-family: "avenir";
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: $primary-color-black;
+  }
+
+  @mixin tablet__lables-buttons {
+    font-family: "avenir";
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+  }

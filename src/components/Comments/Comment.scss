@@ -1,0 +1,61 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/typography";
+@import "../../styles/partials/colors";
+
+//card section
+
+.card {
+    &__big-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      border-bottom: 1.5px solid $secondary-color-mercury;
+      padding: 10px 0;
+      
+  
+
+    }
+  
+    &__propic {
+      //fix propic
+      height: 3rem;
+      border-radius: 2rem;
+      margin-top: 1rem;
+      margin-right: 1rem;
+      align-self: flex-start;
+      background-color: $secondary-color-mercury;
+      flex: 0 0 3rem;
+    }
+  
+    &__container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    &__medium-container {
+      flex-grow: 1;
+    }
+  
+    &__name {
+      @include mobile__bodycopy;  
+      margin: 0;
+      color: $primary-color-black;
+    }
+  
+    &__date {
+      @include mobile__bodycopy;  
+
+      color: $primary-color-silver;
+    }
+  
+    &__comment {
+      @include mobile__bodycopy;  
+      margin: 0;
+      color: $primary-color-black;
+      line-height: 25px;
+    }
+  }
+  

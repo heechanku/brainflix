@@ -1,0 +1,51 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/typography";
+@import "../../styles/partials/colors";
+
+
+.video {
+    display: flex;
+    flex-direction: column;
+    width:90%;
+    margin: 16px auto;
+  
+    &__next {
+      @include mobile__subheader;
+      margin:0 0 16px 0;
+      color: $primary-color-silver;
+    }
+    &__container {
+      display: flex;
+      padding-bottom: 1.5rem;
+      align-items: flex-start;
+      &-image {
+        width: 7.5rem;
+        height: 4.375rem;
+        margin-right: 1rem;
+        border-radius: 4px;
+        object-fit: cover;
+      }
+    }
+    &__sub {
+      &-title {
+        @include mobile__subheader;
+        text-align: left;
+        padding-bottom: 10px;
+        width: 9.5rem;
+        margin:0;
+        
+        @include tablet {
+          @include tablet__subheader;
+        }
+      }
+      &-name {
+        @include  mobile__bodycopy;
+        text-align: left;
+        margin:0;
+
+        @include tablet {
+          @include tablet__subheader;
+        }
+      }
+    }
+  }

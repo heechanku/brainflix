@@ -1,0 +1,169 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/typography";
+@import "../../styles/partials/colors";
+
+// Comment section
+
+.comments {
+  background-color: $primary-color-white;
+  font-weight: 600;
+  color: $primary-color-black;
+  font-size: 0.8125rem;
+  width: 90%;
+  margin: 16px auto;
+  &__title {
+    @include mobile__subheader;
+    color: $primary-color-black;
+    line-height: 2rem;
+    padding: 0;
+    margin:0;
+
+
+    @include tablet {
+      @include tablet__subheader;
+    }
+  }
+
+  &__input {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid $secondary-color-mercury;
+    width: 100%;
+
+  
+
+    @include desktop {
+      width: 50%;
+    }
+  }
+
+  &__profile-pic {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    object-fit: cover;
+    object-position: 20% 0;
+  }
+
+  &__info {
+    width: 100%;
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      padding-bottom: 2rem;
+      width: 100%;
+
+      @include tablet {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between  ;
+      }
+    }
+
+    &__container {
+      display:flex;
+      flex-direction: column;
+
+      @include tablet {
+        width: 70%;
+      }
+    }
+
+    
+
+    
+
+  
+
+    &__comment {
+      @include mobile__lables-buttons;
+      color: $primary-color-silver;
+
+      @include tablet {
+        @include tablet__lables-buttons;
+      }
+    }
+
+    &__comment-input {
+      background-color: $secondary-color-albaster;
+      border-radius: 4px;
+      border: 1.5px solid $secondary-color-mercury;
+      padding: 0.625rem;
+      padding-bottom: 4rem;
+      color: $primary-color-black;
+      resize: none;
+      width: 100%;
+      color: $primary-color-black;
+      
+
+      @include tablet {
+        padding: 10px 0;
+        height: 40px;
+        padding-left: 10px;
+      }
+    }
+
+    &--error {
+      border: 1.5px solid red;
+      outline-width: 0;
+    }
+
+
+    &__comment-input:focus {
+      border: 1.5px solid $primary-color-blue;
+      outline-width: 0;
+    }
+  }
+
+  &__submit {
+    display: flex;
+    flex-direction: row;
+    padding-top: 0.5rem;
+    width: 100%;
+    justify-content: center;
+
+    @include tablet {
+      width: 25%;
+    }
+    &-button {
+      height: 40px;
+      width: 100%;
+      background-color: $primary-color-blue;
+      border: none;
+      border-radius: 0.25rem;
+      color: $primary-color-white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      @include mobile__lables-buttons;
+
+      @include tablet {
+        @include tablet__lables-buttons
+      }
+      
+
+
+      &:focus {
+        outline-width: 0;
+      }
+      &:hover {
+        background-color: $secondary-color-dark-blue;
+      }
+      &__image {
+        padding-right: 1rem;
+        position: absolute;
+        left: 10px;
+      }
+    }
+  }
+}
+
+textarea {
+  font-family: "avenir";
+}
+
