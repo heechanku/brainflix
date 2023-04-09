@@ -10,13 +10,21 @@
   color: $primary-color-black;
   font-size: 0.8125rem;
   width: 90%;
-  margin: 16px auto;
+  margin: 24px auto;
+
+  @include tablet {
+    margin: 36px auto;
+  }
+
+  @include desktop {
+    width: 100%;
+  }
   &__title {
     @include mobile__subheader;
     color: $primary-color-black;
     line-height: 2rem;
     padding: 0;
-    margin:0;
+    margin:16px 0;
 
 
     @include tablet {
@@ -80,6 +88,7 @@
     &__comment {
       @include mobile__lables-buttons;
       color: $primary-color-silver;
+      margin: 5px 0;
 
       @include tablet {
         @include tablet__lables-buttons;
@@ -128,6 +137,11 @@
       width: 25%;
     }
 
+    @include desktop {
+      padding-right: 20px;
+
+    }
+
     
     &-button {
       height: 40px;
@@ -145,6 +159,8 @@
       @include tablet {
         @include tablet__lables-buttons
       }
+
+     
 
       
       

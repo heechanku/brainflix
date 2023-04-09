@@ -7,10 +7,22 @@
     &__about__container {
         width: 90%;
         margin: 24px auto;
+
+        @include tablet {
+            margin: 36px auto;
+        }
+        @include desktop {
+            width:100%;
+        }
     }
 
     &__title {
         @include mobile__page-header;
+        margin: 16px 0;
+
+        @include tablet {
+            margin: 24px 0;
+        }
 
     }
 
@@ -45,6 +57,11 @@
         &__container {
             display: flex;
             flex-direction: row;
+
+            @include desktop {
+                padding-right: 20px;
+        
+              }
         }
 
     }
@@ -83,6 +100,10 @@
         @include mobile__bodycopy;
         color: $primary-color-black;
         margin: 16px 0;
+        @include desktop {
+            padding-right: 20px;
+    
+          }
     }
 
 }

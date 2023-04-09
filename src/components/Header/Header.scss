@@ -63,6 +63,10 @@
         margin: 0 20px;
       }
 
+      @include desktop {
+        width: 20%;
+      }
+
     }
 
 
@@ -113,6 +117,9 @@
       padding: 0;
       width: 30%;
     }
+    @include desktop {
+      width: 20%;
+    }
 
     &-upload {
       height: 40px;
@@ -126,6 +133,10 @@
       width:100%;
       position: relative;
       @include mobile__lables-buttons;
+
+      @include tablet {
+        @include tablet__lables-buttons;
+      }
       &:focus {
         outline-width: 0;
       }

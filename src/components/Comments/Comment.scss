@@ -49,13 +49,24 @@
       @include mobile__bodycopy;  
 
       color: $primary-color-silver;
+
+      @include desktop {
+        padding-right: 20px;
+
+      }
     }
+
+
   
     &__comment {
       @include mobile__bodycopy;  
       margin: 0;
       color: $primary-color-black;
       line-height: 25px;
+      @include desktop {
+        padding-right: 20px;
+
+      }
     }
   }
   
