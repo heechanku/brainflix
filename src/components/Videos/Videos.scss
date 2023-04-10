@@ -60,6 +60,10 @@
       @include tablet {
         width: 25%;
       }
+
+      @include desktop {
+        width: 60%;
+      }
       &-title {
         @include mobile__subheader;
         text-align: left;
