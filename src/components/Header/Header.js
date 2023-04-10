@@ -15,12 +15,7 @@ function Header() {
           <div className="header__search__container">
            
             <form className="header__search">
-              <input
-                className="header__search-image"
-                type="image"
-                src={Search}
-                alt="search"
-              />
+              
               <input
                 className="header__search-bar"
                 name="search"

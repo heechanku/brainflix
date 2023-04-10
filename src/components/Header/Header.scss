@@ -50,11 +50,8 @@
     justify-content: flex-start;
     align-items: center;
     border-radius: 0.25rem;
-    border: 0.0625rem solid $secondary-color-mercury;
-    &:active {
-      border: 0.0625rem solid $primary-color-blue;
-
-    }
+    border:none;
+    
 
 
 
@@ -63,6 +60,7 @@
     &__container { 
       width:100%;
       display: flex;
+      
       @include tablet  {
         width: 35%;
         margin: 0 1.25rem;
@@ -78,24 +76,24 @@
     
 
    
-    &-image {
-      height: 1.125rem;
-      width: 1.125rem;
-      margin-left: 1rem;
-      margin-right: 0.5rem;
-    }
+   
     &-bar {
       resize: none;
       width: inherit;
       height: 2.5rem;
       margin-right: 0.3125rem;
       border: 0.0625rem solid $secondary-color-mercury;
-      border-left: none;
-      border-right: none;
+      border-radius: 0.25rem;
+      background-image: url(../../assets/Icons/search.svg);
+      background-repeat: no-repeat;
+      background-position: 0.625rem ;
+      padding-left: 2.1875rem;
       &:focus {
-        outline-width: 0;
-        outline: none;
+        outline:none;
+        border: 0.0625rem solid $primary-color-blue;
       }
+
+     
 
     }
 
