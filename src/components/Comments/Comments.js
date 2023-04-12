@@ -11,7 +11,7 @@ function Comments(props) {
 
   return (
     <>
-      <section class="comments">
+      <section className="comments">
         <h2 className="comments__title">{lengthofComments} Comments</h2>
         <div className="comments__input">
           <img className="comments__profile-pic" src={propic} alt="Profile Pic" />
@@ -19,12 +19,12 @@ function Comments(props) {
             <form className="comments__info__form">
               <div className="comments__info__container">
 
-              <label for="comment" class="comments__info__comment">
+              <label for="comment" className="comments__info__comment">
                 JOIN THE CONVERSATION
               </label>
               <textarea
                 id="comment"
-                class="comments__info__comment-input"
+                className="comments__info__comment-input"
                 name="comment"
                 placeholder="Add a new comment"
                 ></textarea>
