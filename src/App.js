@@ -16,7 +16,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Upload" element={<VideoUpload />} />
-
       </Routes>
     </BrowserRouter>
   );
@@ -49,8 +48,5 @@ function Home() {
     </div>
   );
 }
-
-
-
 
 export default App;

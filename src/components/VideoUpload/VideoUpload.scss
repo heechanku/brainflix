@@ -2,4 +2,232 @@
 @import "../../styles/partials/typography";
 @import "../../styles/partials/colors";
 
+.videoUpload {
+  border-top: 0.0625rem solid $secondary-color-mercury;
 
+  &__container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__title {
+    @include mobile__page-header;
+    color: $primary-color-black;
+    margin: 24px 0;
+
+    @include tablet {
+        @include tablet__page-header;
+        padding-bottom: 20px;
+    }
+  }
+
+  &__info__container {
+
+    @include tablet {
+      border-top: 1px solid $secondary-color-mercury;
+      border-bottom: 1px solid $secondary-color-mercury;
+    }
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      padding: 36px 0;
+      height: 350px
+
+    }
+  }
+
+  &__subtitle {
+    @include mobile__header;
+    color: $primary-color-silver;
+    margin-bottom: 10px;
+
+    @include tablet {
+        @include tablet__header;
+        color: $primary-color-silver;
+
+    }
+
+    @include desktop {
+      margin-bottom: 5px;
+    }
+
+   
+  }
+
+  &__subtitle-image__container{
+    @include desktop {
+      width: 35%;
+      margin-right: 16px;
+     
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      
+    }
+  }
+
+
+  &__image {
+    width: 100%;
+    border-radius: 4px;
+
+    @include tablet {
+        width: 50%;
+    }
+
+    @include desktop {
+      width: 90%;
+      height: 239.4px;
+      
+    }
+
+    
+  }
+
+  &__input__container{
+    @include desktop {
+      width: 65%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &__title-input {
+    margin-bottom: 16px;
+    background-color: $secondary-color-albaster;
+    border: 1px solid $secondary-color-mercury;
+    border-radius: 4px;
+    height: 30px;
+    padding-left: 10px;
+    width: 100%;
+
+    @include desktop {
+      height:40px;
+      padding-left: 20px;
+    }
+    &:focus {
+      outline: none;
+      border: 0.0625rem solid $primary-color-blue;
+    }
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__title-label {
+    margin: 16px 0 5px 0;
+    @include mobile__header;
+    color: $primary-color-silver;
+    @include tablet {
+        @include tablet__header;
+        color: $primary-color-silver;
+
+    }
+    @include desktop {
+      margin-top: 12px;
+    }
+  }
+
+  &__description {
+    margin: 5px 0 16px 0;
+
+    background-color: $secondary-color-albaster;
+    border: 1px solid $secondary-color-mercury;
+    border-radius: 4px;
+    resize: none;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    overflow: auto;
+
+    @include tablet {
+      padding-bottom: 40px;
+    }
+
+    @include desktop {
+      margin-bottom: 0;
+      padding-bottom: 100px;
+      padding-left: 20px;
+    }
+    &:focus {
+      outline: none;
+      border: 0.0625rem solid $primary-color-blue;
+    }
+
+    &-label {
+      @include mobile__header;
+      color: $primary-color-silver;
+      @include tablet {
+        @include tablet__header;
+        color: $primary-color-silver;
+    }
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+
+     
+    }
+  }
+
+  &__button {
+    height: 2.5rem;
+    background-color: $primary-color-blue;
+    border: none;
+    border-radius: 0.25rem;
+    color: $primary-color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin: 24px 0;
+    @include mobile__lables-buttons;
+
+    @include tablet {
+      @include tablet__lables-buttons;
+      
+
+    }
+    &:focus {
+      outline-width: 0;
+    }
+    &:hover {
+      background-color: $secondary-color-dark-blue;
+    }
+    &-image {
+      padding-right: 1rem;
+      position: absolute;
+      left: 0.625rem;
+    }
+
+    &__container{
+      min-width: 150px
+      
+    }
+  }
+
+  &__cancel {
+    @include mobile__lables-buttons;
+    color: $primary-color-blue;
+    text-align: center;
+    margin: 24px;
+
+    @include tablet {
+        @include tablet__lables-buttons;
+        width: 20%;
+    }
+  }
+
+  &__button-cancel__container{
+    @include tablet {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      width: 100%;
+    }
+  }
+}

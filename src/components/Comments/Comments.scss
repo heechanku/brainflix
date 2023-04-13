@@ -24,8 +24,7 @@
     color: $primary-color-black;
     line-height: 2rem;
     padding: 0;
-    margin:1rem 0;
-
+    margin: 1rem 0;
 
     @include tablet {
       @include tablet__subheader;
@@ -37,10 +36,6 @@
     justify-content: center;
     border-bottom: 0.0625rem solid $secondary-color-mercury;
     width: 100%;
-
-  
-
-   
   }
 
   &__profile-pic {
@@ -66,24 +61,18 @@
       @include tablet {
         flex-direction: row;
         align-items: flex-end;
-        justify-content: space-between  ;
+        justify-content: space-between;
       }
     }
 
     &__container {
-      display:flex;
+      display: flex;
       flex-direction: column;
 
       @include tablet {
         width: 70%;
       }
     }
-
-    
-
-    
-
-  
 
     &__comment {
       @include mobile__lables-buttons;
@@ -105,7 +94,6 @@
       resize: none;
       width: 100%;
       color: $primary-color-black;
-      
 
       @include tablet {
         padding: 0.625rem 0;
@@ -118,7 +106,6 @@
       border: 0.0938rem solid red;
       outline-width: 0;
     }
-
 
     &__comment-input:focus {
       border: 0.0938rem solid $primary-color-blue;
@@ -139,10 +126,8 @@
 
     @include desktop {
       padding-right: 1.25rem;
-
     }
 
-    
     &-button {
       height: 2.5rem;
       width: 100%;
@@ -157,14 +142,8 @@
       @include mobile__lables-buttons;
 
       @include tablet {
-        @include tablet__lables-buttons
+        @include tablet__lables-buttons;
       }
-
-     
-
-      
-      
-
 
       &:focus {
         outline-width: 0;
@@ -184,4 +163,3 @@
 textarea {
   font-family: "avenir";
 }
-

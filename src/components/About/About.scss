@@ -2,108 +2,92 @@
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/typography";
 
-
 .hero {
-    &__about__container {
-        width: 90%;
-        margin: 1.5rem auto;
+  &__about__container {
+    width: 90%;
+    margin: 1.5rem auto;
 
-        @include tablet {
-            margin: 2.25rem auto;
-        }
-        @include desktop {
-            width:100%;
-        }
+    @include tablet {
+      margin: 2.25rem auto;
+    }
+    @include desktop {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @include mobile__page-header;
+    margin: 1rem 0;
+
+    @include tablet {
+      margin: 1.5rem 0;
+    }
+  }
+
+  &__info {
+    @include mobile__header;
+    color: $primary-color-silver;
+
+    &--channel {
+      color: $primary-color-black;
     }
 
-    &__title {
-        @include mobile__page-header;
-        margin: 1rem 0;
+    &__container {
+      padding: 0.625rem 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      border-bottom: 0.125rem solid $secondary-color-mercury;
+      border-top: 0.125rem solid $secondary-color-mercury;
+      @include tablet {
+        border-top: none;
+      }
+    }
+  }
 
-        @include tablet {
-            margin: 1.5rem 0;
-        }
+  &__icon {
+    margin-right: 0.3125rem;
 
+    &__container {
+      display: flex;
+      flex-direction: row;
+
+      @include desktop {
+        padding-right: 1.25rem;
+      }
+    }
+  }
+
+  &__medium__container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    @include tablet {
+      flex-direction: row;
     }
 
-    &__info {
-        @include mobile__header;
-        color: $primary-color-silver;
-
-        &--channel {
-            color: $primary-color-black;
-        }
-
-        &__container {
-            padding: 0.625rem 0;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            border-bottom: 0.125rem solid $secondary-color-mercury;
-            border-top: 0.125rem solid $secondary-color-mercury;
-            @include tablet {
-                border-top: none;
-            }
-
-
-        }
-        
-    }
-
-    &__icon {
-
-        margin-right: 0.3125rem;
-
-        &__container {
-            display: flex;
-            flex-direction: row;
-
-            @include desktop {
-                padding-right: 1.25rem;
-        
-              }
-        }
-
-    }
-    
-   
-
-    &__medium__container {
+    &--icons {
+      @include tablet {
         display: flex;
-        flex-direction: column;
-        width:50%;
-
-        @include tablet {
-            flex-direction: row
-        }
-
-        &--icons {
-
-            @include tablet {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-end;
-            }
-          
-        }
-
-        
+        flex-direction: row;
+        justify-content: flex-end;
+      }
     }
+  }
 
-    &__margin {
-        @include tablet {
-            margin-right: 1.25rem;
-        }
+  &__margin {
+    @include tablet {
+      margin-right: 1.25rem;
     }
+  }
 
-    &__description {
-        @include mobile__bodycopy;
-        color: $primary-color-black;
-        margin: 1rem 0;
-        @include desktop {
-            padding-right: 1.25rem;
-    
-          }
+  &__description {
+    @include mobile__bodycopy;
+    color: $primary-color-black;
+    margin: 1rem 0;
+    @include desktop {
+      padding-right: 1.25rem;
     }
-
+  }
 }

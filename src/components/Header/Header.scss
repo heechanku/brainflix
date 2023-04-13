@@ -3,30 +3,27 @@
 @import "../../styles/partials/typography";
 
 .header {
+  &__container {
+    max-height: 11rem;
+    margin: 1rem auto;
+    width: 90%;
 
-    &__container {
-        max-height: 11rem;
-        margin: 1rem auto;
-        width: 90%;
-      
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-        @include tablet {
-          flex-direction: row;
-          align-items: center;
-          justify-content: flex-end;
-          position: relative;
-          margin: 1.5rem auto;
-        }
-
-        @include desktop {
-          width: 85%;
-        }
-
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      position: relative;
+      margin: 1.5rem auto;
     }
- 
+
+    @include desktop {
+      width: 85%;
+    }
+  }
 
   background-color: $primary-color-white;
   &__logo {
@@ -41,7 +38,6 @@
       position: absolute;
       left: 0;
     }
-    
   }
   &__search {
     width: 100%;
@@ -50,18 +46,13 @@
     justify-content: flex-start;
     align-items: center;
     border-radius: 0.25rem;
-    border:none;
-    
+    border: none;
 
-
-
-    
-
-    &__container { 
-      width:100%;
+    &__container {
+      width: 100%;
       display: flex;
-      
-      @include tablet  {
+
+      @include tablet {
         width: 35%;
         margin: 0 1.25rem;
       }
@@ -69,14 +60,8 @@
       @include desktop {
         width: 20%;
       }
-
     }
 
-
-    
-
-   
-   
     &-bar {
       resize: none;
       width: inherit;
@@ -86,15 +71,12 @@
       border-radius: 0.25rem;
       background-image: url(../../assets/Icons/search.svg);
       background-repeat: no-repeat;
-      background-position: 0.625rem ;
+      background-position: 0.625rem;
       padding-left: 2.1875rem;
       &:focus {
-        outline:none;
+        outline: none;
         border: 0.0625rem solid $primary-color-blue;
       }
-
-     
-
     }
 
     &-user--mobile {
@@ -110,6 +92,11 @@
         display: none;
       }
     }
+  }
+
+  &__link{
+    height: 2.5rem;
+    width: 100%;
   }
   &__bot {
     display: flex;
@@ -134,7 +121,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width:100%;
+      width: 100%;
       position: relative;
       @include mobile__lables-buttons;
 
@@ -163,7 +150,7 @@
       margin-left: 1rem;
       display: none;
       @include tablet {
-        display:flex;
+        display: flex;
       }
     }
   }
