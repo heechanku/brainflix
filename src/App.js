@@ -3,11 +3,16 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Comments from "./components/Comments/Comments";
 import Videos from "./components/Videos/Videos";
-import { useState } from "react";
-import Videodetails from "./assets/Data/video-details.json";
+import { useState, useEffect } from "react";
 import About from "./components/About/About";
 import VideoUpload from "./components/VideoUpload/VideoUpload";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useParams,
+} from "react-router-dom";
+import axios from "axios";
 
 function App() {
   return (
@@ -15,6 +20,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/:id" element={<Home />} />
         <Route path="/Upload" element={<VideoUpload />} />
       </Routes>
     </BrowserRouter>
@@ -22,28 +28,63 @@ function App() {
 }
 
 function Home() {
-  const [selectedVideo, setSelectedVIdeo] = useState(Videodetails[0]);
+  const [videoDetails, setVideoDetails] = useState(null);
+  const [selectedVideo, setSelectedVIdeo] = useState(null);
+  const { id } = useParams();
+  
 
-  const handleSelectVideo = (clickedId) => {
-    const foundVideo = Videodetails.find((video) => video.id === clickedId);
+  const BASE_URL = "https://project-2-api.herokuapp.com";
 
-    setSelectedVIdeo(foundVideo);
-  };
+
+
+  useEffect(() => {
+    axios
+      .get(
+        `${BASE_URL}/videos?api_key=ab03e4b2-b165-44ba-9626-1f077a7c18bb`
+      )
+      .then((res) => {
+        setVideoDetails(res.data);
+      });
+  }, []);
+
+  useEffect(() => {
+
+    const videoDetail = id || videoDetails?.[0]["id"];
+
+    if (videoDetail) {
+      setSelectedVIdeo(null);
+      axios
+        .get(
+          `${BASE_URL}/videos/${videoDetail}?api_key=ab03e4b2-b165-44ba-9626-1f077a7c18bb`
+        )
+        .then(({ data }) => {
+          setSelectedVIdeo(data);
+        })
+        .catch((e) => {});
+    }
+    
+  }, [id, videoDetails]);
+
+  if (!videoDetails) return <p>Loading videos...</p>;
 
   return (
     <div>
-      <Hero video={selectedVideo} />
+      {selectedVideo ? <Hero video={selectedVideo} /> : <div>loading</div>}
 
-      <div className="big__container">
+      <div className="about-comments-videos__container">
         <div className="about-comments__container">
-          <About video={selectedVideo} />
-          <Comments video={selectedVideo} />
+          {selectedVideo ? <About video={selectedVideo} /> : <div>loading</div>}
+          {selectedVideo ? (
+            <Comments video={selectedVideo} />
+          ) : (
+            <div>loading</div>
+          )}
         </div>
-        <Videos
-          videos={Videodetails}
-          selectedVideo={handleSelectVideo}
-          video={selectedVideo}
-        />
+        {selectedVideo ? (
+          <Videos videos={videoDetails} video={selectedVideo} />
+        ) : (
+          <div>loading</div>
+        )}
       </div>
     </div>
   );

@@ -192,6 +192,9 @@
       
 
     }
+    &:visited{
+      color:$primary-color-white;
+    }
     &:focus {
       outline-width: 0;
     }

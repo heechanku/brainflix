@@ -25,16 +25,16 @@ function Header() {
             <div className="header__search-user--mobile"></div>
           </div>
           <div className="header__bot">
-            <NavLink to="Upload" className="header__link">
-            <buttton className="header__bot-upload">
+            
+            <NavLink to="/Upload" className="header__bot-upload">
               <img
                 className="header__bot-upload-image"
                 src={Upload}
                 alt="Upload"
               />
               UPLOAD
-            </buttton>
             </NavLink>
+            
             <div className="header__bot-user--tablet"></div>
           </div>
         </div>

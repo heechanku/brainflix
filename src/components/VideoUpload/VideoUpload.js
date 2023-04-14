@@ -1,6 +1,7 @@
 import thumbnail from "../../assets/Images/Upload-video-preview.jpg";
 import "./VideoUpload.scss";
 import publish from "../../assets/Icons/publish.svg";
+import { Link } from "react-router-dom";
 
 function VideoUpload() {
   return (
@@ -47,14 +48,14 @@ function VideoUpload() {
           </form>
           <div className="videoUpload__button-cancel__container">
             <div className="videoUpload__button__container">
-              <button className="videoUpload__button" type="submit">
+              <Link to="/" className="videoUpload__button" type="submit">
                 <img
                   className="header__bot-upload-image"
                   src={publish}
                   alt="Publish"
                 />
                 PUBLISH
-              </button>
+              </Link>
             </div>
             <h3 className="videoUpload__cancel">CANCEL</h3>
           </div>

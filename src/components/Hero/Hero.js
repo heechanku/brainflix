@@ -1,6 +1,7 @@
 import "./Hero.scss";
 
 function Hero(props) {
+
   return (
     <>
       <section className="hero">

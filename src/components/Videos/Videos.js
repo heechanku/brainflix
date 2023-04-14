@@ -1,5 +1,6 @@
 import React from "react";
 import "./Videos.scss";
+import { Link } from "react-router-dom";
 
 function Videos(props) {
   const otherVideos = props.videos.filter(
@@ -11,11 +12,10 @@ function Videos(props) {
       <div className="video">
         <h4 className="video__next">NEXT VIDEO</h4>
         {otherVideos.map((video) => (
-          <button
-            onClick={() => {
-              props.selectedVideo(video.id);
-            }}
+          <Link
+            
             key={video.id}
+            to={`/${video.id}`}
             className="video__container"
           >
             <img
@@ -27,7 +27,7 @@ function Videos(props) {
               <h2 className="video__sub-title">{video.title}</h2>
               <h3 className="video__sub-name">{video.channel}</h3>
             </div>
-          </button>
+          </Link>
         ))}
       </div>
     </>
