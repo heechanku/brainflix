@@ -26,17 +26,3 @@ ul {
   list-style: none;
 }
 
-.about-comments-videos__container {
-  @include desktop {
-    width: 85%;
-    margin: 0 auto;
-    display: flex;
-  }
-}
-
-.about-comments__container {
-  @include desktop {
-    min-width: 53.75rem;
-    max-width: 53.75rem;
-  }
-}

@@ -57,7 +57,7 @@ function VideoUpload() {
                 PUBLISH
               </Link>
             </div>
-            <h3 className="videoUpload__cancel">CANCEL</h3>
+            <Link to="/" className="videoUpload__cancel">CANCEL</Link>
           </div>
         </div>
       </section>
