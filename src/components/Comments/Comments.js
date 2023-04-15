@@ -20,7 +20,7 @@ function Comments(props) {
           <div className="comments__info">
             <form className="comments__info__form">
               <div className="comments__info__container">
-                <label for="comment" className="comments__info__comment">
+                <label htmlFor="comment" className="comments__info__comment">
                   JOIN THE CONVERSATION
                 </label>
                 <textarea
