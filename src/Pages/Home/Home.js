@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import About from "../../components/About/About";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+const { REACT_APP_BASE_URL } = process.env;
+
 
 function Home() {
     const [videoDetails, setVideoDetails] = useState(null);
@@ -13,37 +15,39 @@ function Home() {
     const { id } = useParams();
     
   
-    const BASE_URL = "https://project-2-api.herokuapp.com";
+    const BASE_URL = REACT_APP_BASE_URL;
   
   
   
     useEffect(() => {
-      axios
-        .get(
-          `${BASE_URL}/videos?api_key=ab03e4b2-b165-44ba-9626-1f077a7c18bb`
-        )
-        .then((res) => {
-          setVideoDetails(res.data);
-        });
+      getVideos();
     }, []);
   
     useEffect(() => {
-  
+      
       const videoDetail = id || videoDetails?.[0]["id"];
   
       if (videoDetail) {
         setSelectedVIdeo(null);
         axios
           .get(
-            `${BASE_URL}/videos/${videoDetail}?api_key=ab03e4b2-b165-44ba-9626-1f077a7c18bb`
+            `${BASE_URL}/videos/${videoDetail}`
           )
           .then(({ data }) => {
-            setSelectedVIdeo(data);
+            setSelectedVIdeo(data[0]);
+            
+
           })
           .catch((e) => {});
       }
       
     }, [id, videoDetails]);
+
+    function getVideos() {
+      axios.get(`${BASE_URL}/videos`).then(({ data }) => {
+        setVideoDetails(data);
+      });
+    }
   
     if (!videoDetails) return <p>Loading videos...</p>;
   

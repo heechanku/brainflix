@@ -1,8 +1,7 @@
 import Logo from "../../assets/Logo/BrainFlix-logo.svg";
-import Search from "../../assets/Icons/search.svg";
 import Upload from "../../assets/Icons/upload.svg";
 import "./Header.scss";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (

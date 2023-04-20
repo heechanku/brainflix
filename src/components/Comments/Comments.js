@@ -4,6 +4,8 @@ import Submit from "../../assets/Icons/add_comment.svg";
 import Comment from "./Comment";
 
 function Comments(props) {
+
+  
   let lengthofComments = props.video.comments.length;
 
 
