@@ -215,7 +215,9 @@
 
   &__cancel {
     @include mobile__lables-buttons;
+    background-color: $primary-color-white;
     color: $primary-color-blue;
+    border: 1px none;
     text-align: center;
     margin: 24px;
 
@@ -230,8 +232,9 @@
   }
 
   &__button-cancel__container{
+    display: flex;
+    flex-direction: column;
     @include tablet {
-      display: flex;
       align-items: center;
       flex-direction: row-reverse;
       width: 100%;

@@ -1,15 +1,48 @@
 import thumbnail from "../../assets/Images/Upload-video-preview.jpg";
 import "./VideoUpload.scss";
 import publish from "../../assets/Icons/publish.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
+const { REACT_APP_BASE_URL } = process.env;
 
 function VideoUpload() {
+  const [error, setError] = useState("");
+
+
+  const BASE_URL = REACT_APP_BASE_URL;
+
+  let navigate = useNavigate(); 
+  const routeChange = () =>{ 
+    let path = `/`; 
+    navigate(path);
+  }
+
+  
+
   return (
     <div>
       <section className="videoUpload">
         <div className="videoUpload__container">
           <h1 className="videoUpload__title">Upload Video</h1>
-          <form className="videoUpload__info__container">
+          <form className="videoUpload__info__container" id="upload-form" onSubmit={(e) => {
+            e.preventDefault()
+            const title = e.target.title.value;
+            const description = e.target.description.value;
+
+            setError("");
+
+            axios
+              .post(`${BASE_URL}/videos`, { title, description })
+              .then(() => {
+                routeChange()
+              })
+              .catch(({ response }) => {
+                setError(`Error! ${response.data}`);
+              });
+              
+          }}
+          >
             <div className="videoUpload__subtitle-image__container">
             <h3 className="videoUpload__subtitle">VIDEO THUMBNAIL</h3>
             <img
@@ -20,7 +53,7 @@ function VideoUpload() {
             </div>
             <div className="videoUpload__input__container">
               <div className="videoUpload__title-input__container">
-                <label for="title" className="videoUpload__title-label">
+                <label htmlFor="title" className="videoUpload__title-label">
                   TITLE YOUR VIDEO
                 </label>
                 <input
@@ -33,7 +66,7 @@ function VideoUpload() {
               </div>
               <div className="videoUpload__description__container">
                 <label
-                  for="description"
+                  htmlFor="description"
                   className="videoUpload__description-label"
                 >
                   ADD A DESCRIPTION VIDEO
@@ -42,22 +75,26 @@ function VideoUpload() {
                   id="description"
                   className="videoUpload__description"
                   placeholder="Add a description to your video"
+                  name="description"
                 ></textarea>
               </div>
             </div>
           </form>
           <div className="videoUpload__button-cancel__container">
             <div className="videoUpload__button__container">
-              <Link to="/" className="videoUpload__button" type="submit">
+             
+              <button form="upload-form"  className="videoUpload__button" type="submit" >
                 <img
                   className="header__bot-upload-image"
                   src={publish}
                   alt="Publish"
                 />
                 PUBLISH
-              </Link>
+              </button>
+             
             </div>
-            <Link to="/" className="videoUpload__cancel">CANCEL</Link>
+
+            <Link className="videoUpload__cancel"  to="/"><button className="videoUpload__cancel">CANCEL</button></Link>
           </div>
         </div>
       </section>
