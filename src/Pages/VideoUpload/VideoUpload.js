@@ -36,9 +36,13 @@ function VideoUpload() {
               .post(`${BASE_URL}/videos`, { title, description })
               .then(() => {
                 routeChange()
+                alert("Your video has been created!");
+
               })
               .catch(({ response }) => {
-                setError(`Error! ${response.data}`);
+               
+                alert("Fill out all the boxes!");
+
               });
               
           }}
